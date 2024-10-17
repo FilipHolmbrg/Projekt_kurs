@@ -2,7 +2,7 @@ import pandas as pd
 
 def read_inflation_data() -> pd.DataFrame:
     """Function to read inflation data saved localy as .xlsx file in working directory"""
-    file_path = r'prc_hicp_manr_page_spreadsheet (1).xlsx'
+    file_path = r'./example_data/prc_hicp_manr_page_spreadsheet (1).xlsx'
     df = pd.read_excel(file_path, skiprows=lambda x: x in list(range(0, 9)), sheet_name='Sheet 1')
     return df
 

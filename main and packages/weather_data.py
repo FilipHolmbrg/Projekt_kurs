@@ -2,7 +2,7 @@ import pandas as pd
 
 def read_weather_data() -> pd.DataFrame:
     """Function to read historical weather data saved localy as .xlsx file"""
-    file_path = r'open-meteo-57.68N12.03E9m (3).xlsx'
+    file_path = r'./example_data/open-meteo-57.68N12.03E9m (3).xlsx'
     df = pd.read_excel(file_path, skiprows=lambda x: x in list(range(0, 10)))
     return df
 
