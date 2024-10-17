@@ -4,7 +4,7 @@ import time
 
 def read_prices() -> pd.DataFrame:
 
-    api_key = 'INSER API KEY HERE' #"35424227-10de-45bc-bfd9-1647821c1d5f"
+    api_key = 'INSER API KEY HERE' 
     client = EntsoePandasClient(api_key = api_key)
 
     area = "SE_3"
