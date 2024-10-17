@@ -14,16 +14,16 @@ def read_prices() -> pd.DataFrame:
 
     for year in range (2015, 2025):
         if year == 2024:
-            start = pd.Timestamp(f"{year}-01-01", tz = "Europe/Stockholm")
-            end = pd.Timestamp(f"{year}-09-30", tz = "Europe/Stockholm")
+            start = pd.Timestamp(f"{year}-01-01", tz = timezone)
+            end = pd.Timestamp(f"{year}-09-30", tz = timezone)
                 
             df_year = client.query_day_ahead_prices(area, start = start, end = end)
             dataframes.append(df_year)
             time.sleep(10)
                 
         else:
-            start = pd.Timestamp(f"{year}-01-01", tz = "Europe/Stockholm")
-            end = pd.Timestamp(f"{year}-12-31", tz = "Europe/Stockholm")
+            start = pd.Timestamp(f"{year}-01-01", tz = timezone)
+            end = pd.Timestamp(f"{year}-12-31", tz = timezone)
         
             df_year = client.query_day_ahead_prices(area, start = start, end = end)
             dataframes.append(df_year)
