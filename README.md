@@ -23,6 +23,8 @@ This project explores how weather conditions, electricity prices and inflation d
 pip install pandas numpy scikit-learn sqlite3 openpyxl
 ```
 * Create an account at [Entsoe](https://transparency.entsoe.eu/dashboard/show) and ask for an API key.
-* 
+* On row 8 in `price_data.py`, change `api_key` to your acquired API key from Entsoe.
 2. __Data Preparation__:
-* R
+* Run the `main.py` script to load and merge data from the various sources.
+* The script will save the final dataset to an SQLite database for further analysis.
+3.
