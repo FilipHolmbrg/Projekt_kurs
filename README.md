@@ -18,13 +18,14 @@ This project explores how weather conditions, electricity prices and inflation d
 * `final_models.R`: Used for building regression models to predict electricity prices based on the weather and inflation data.
 ### Usage
 1. __Setup__:
-* Ensure that the requiered Python libraries are installed. You can install the libraries using the `requierments.txt` or manually via `pip`:
-``` 
-pip install pandas numpy scikit-learn sqlite3 openpyxl
-```
-* Create an account at [Entsoe](https://transparency.entsoe.eu/dashboard/show) and ask for an API key.
-* On row 8 in `price_data.py`, change `api_key` to your acquired API key from Entsoe.
+  * Ensure that the requiered Python libraries are installed. You can install the libraries using the `requierments.txt` or manually via `pip`:
+  ``` 
+  pip install pandas numpy scikit-learn sqlite3 openpyxl
+  ```
+  * Create an account at [Entsoe](https://transparency.entsoe.eu/dashboard/show) and ask for an API key.
+  * On row 8 in `price_data.py`, change `api_key` to your acquired API key from Entsoe.
 2. __Data Preparation__:
-* Run the `main.py` script to load and merge data from the various sources.
-* The script will save the final dataset to an SQLite database for further analysis.
-3.
+  * Run the `main.py` script to load and merge data from the various sources.
+  * The script will save the final dataset to an SQLite database for further analysis.
+3. __Modeling__:
+* After the dataset has been prepared, use the `final_models.R` script to build and evaluate regression models on the data. The R script is designed to handle the final cleaned dataset and train machine learning models (e.g., Random Forest, Linear Regression) to predict electricity prices.
