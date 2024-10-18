@@ -8,17 +8,17 @@ This project explores how weather conditions, electricity prices and inflation d
 * `weather_price_data_vers3.db`: SQLite database that serves as the main data source for the project.
 ### Python Scripts
 * `main.py`: The main script that loads, merges and prepares the data.
-* `weather_data.py`: Script that fetches, cleanes and prepares weather data.
-* `df_to_sql.py`: Script that coverts pandas DataFrames to SQL databases.
+* `weather_data.py`: Script that fetches, cleans and prepares weather data.
+* `df_to_sql.py`: Script that converts pandas DataFrames to SQL databases.
 * `file_merger.py`: Merges the weather data and electricity prices into a dataset.
-* `inflation_data.py`: Processes inflaion data and prepares it for integration with electricity price models.
+* `inflation_data.py`: Processes inflation data and prepares it for integration with electricity price models.
 * `price_data.py`: Electricity price data processing.
-* `read_prices.py`: Reads data form the CSV file and preforms initial transformations.
+* `read_prices.py`: Reads data from the CSV file and performs initial transformations.
 ### R Scripts
 * `final_models.R`: Used for building regression models to predict electricity prices based on the weather and inflation data.
 ### Usage
 1. __Setup__:
-  * Ensure that the requiered Python libraries are installed. You can install the libraries using the `requierments.txt` or manually via `pip`:
+  * Ensure that the required Python libraries are installed. You can install the libraries using the `requirements.txt` or manually via `pip`:
   ``` 
   pip install pandas numpy scikit-learn sqlite3 openpyxl
   ```
